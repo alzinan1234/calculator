@@ -40,6 +40,54 @@ body{
     padding: 10px;
     font-size: 2em;
 }
+/* --------------a --------- */
+.calculator a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 8px;
+    background: linear-gradient(180deg,#d600fc,#3f3f3f);
+    box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25),
+    0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4) ;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+.calculator a::before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    bottom: 14px;
+    right: 12px;
+    background: linear-gradient(90deg,#2d2d2d,#4d4d4d);
+    border-radius: 10px;
+    box-shadow: -5px -5px 15px #e6a0091a,
+    10px 5px 10px rgba(0, 45, 192, 0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+   
+}
+.calculator a:active{
+    filter: brightness(5);
+}
+.calculator a i{
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+/* -------------------------------------------------a */
 .calculator span {
     position: relative;
     display: grid;
@@ -122,4 +170,17 @@ span{
 }
 .ftr{
     text-align: center;
+}
+
+@media screen and (max-width:420px){
+    .container{
+        position: relative;
+        min-width: 420px;
+        min-height: 400px;
+        background: #333;
+        padding:40px 30px 30px ;
+        border-radius: 20px;
+        box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25), 10px 10px 70px rgba(0, 0, 0, 0.25), inset -5px -5px 15px rgba(0, 0, 0, 0.5),inset  5px 5px 15px rgba(0, 0, 0, 0.5);
+    }
+    
 }
